@@ -1,0 +1,57 @@
+<form (ngSubmit)="onSubmit()" #chaussureForm="ngForm">
+  <div>
+    <label for="titreStatiqtique">titre : </label>
+    <input
+      type="text"
+      id="titreStatiqtique"
+      class="form-control"
+      [(ngModel)]="titre"
+      name="titre"
+      required
+    />
+  </div>
+  <div>
+    <label for="idStatistique">ID : </label>
+    <input
+      type="text"
+      id="idStatistique"
+      class="form-control"
+      [(ngModel)]="id"
+      name="id"
+      required
+    />
+  </div>
+  <div>
+    <label for="appreciationStatistique">appreciation : </label>
+    <input
+      type="text"
+      id="appreciationStatistique"
+      class="form-control"
+      [(ngModel)]="appreciation"
+      name="appreciation"
+      required
+    />
+  </div>
+  <div>
+    <label for="ValeurStatistique">valeur : </label>
+    <input
+      type="number"
+      id="ValeurStatistique"
+      min="26"
+      max="52"
+      class="form-control"
+      [(ngModel)]="valeur"
+      name="valeur"
+      required
+    />
+  </div>
+  <div>
+    <button
+      class="btn btn-success"
+      type="submit"
+      [disabled]="!chaussureForm.form.valid"
+    >
+      <span>Ajouter</span>
+    </button>
+  </div>
+</form>
