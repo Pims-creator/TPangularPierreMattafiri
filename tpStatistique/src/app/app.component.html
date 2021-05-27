@@ -1,4 +1,5 @@
 <app-statistique
   *ngFor="let s of tabStatistique"
   [uneStatistique]="s"
+  (demandeSuppression)="supprimerStatistique(s)"
 ></app-statistique>

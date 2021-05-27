@@ -27,4 +27,17 @@ export class StatApiService {
         return this.statistiqueEnLigne;
       });
   }
+  supprimerStatistique(idstat: string): Promise<void> {
+    return this.http
+      .delete(this.API_URL + '/' + idstat)
+      .toPromise()
+      .then(() => {
+        let position = this.statistiqueEnLigne.findIndex(
+          (c) => c.identifiant === idstat
+        );
+        if (position != -1) {
+          this.statistiqueEnLigne.splice(position, 1);
+        }
+      });
+  }
 }

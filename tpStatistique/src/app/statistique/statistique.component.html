@@ -1,6 +1,9 @@
-<div>
+<div class="cardstat">
   <p>titre de ma stat :{{ uneStatistique.titre }}</p>
   <p>identifiant de ma stat :{{ uneStatistique.identifiant }}</p>
   <p>valeur de ma stat :{{ uneStatistique.valeur }}</p>
   <p>appreciation de ma stat :{{ uneStatistique.appreciation }}</p>
+  <button type="button" class="btn btn-danger" (click)="traiterClicBouton()">
+    Supprimer
+  </button>
 </div>

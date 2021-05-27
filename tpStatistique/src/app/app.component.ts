@@ -42,4 +42,9 @@ export class AppComponent {
       this.tabStatistique = stat;
     });
   }
+
+  supprimerStatistique(stat: Statistique) {
+    this.Statapiserv.supprimerStatistique(stat.identifiant);
+    console.log('toto');
+  }
 }
